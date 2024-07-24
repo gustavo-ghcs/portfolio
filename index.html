@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Pessoal</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- EmailJS Script -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          emailjs.init("sguwFf4IWd4T0BA02");
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              emailjs.sendForm('service_d6lxs0d', 'template_2fs6gug', this)
+                  .then((response) => {
+                      console.log('Success:', response);
+                      alert('Mensagem enviada com sucesso!');
+                      form.reset(); 
+                  }, (error) => {
+                      console.log('Error:', error);
+                      alert('Falha ao enviar a mensagem. Tente novamente.');
+                  });
+          });
+      }
+  </script>
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/perfil.jpg" alt="Gustavo Hollanda" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Gustavo Hollanda">Gustavo Hollanda</h1>
+
+          <p class="title">Web / Mobile developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar Contatos</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:ghv.guga@gmail.com?subject=Assunto%20do%20Email&body=Corpo%20do%20Email" class="contact-link">ghv.guga@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Telefone</p>
+
+              <a href="tel:+55(81)979080734" class="contact-link">+55 (81) 97908-0734</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Nascimento</p>
+
+              <time datetime="04-02-2002">04 de Fevereiro, 2002</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Localização</p>
+
+              <address>Recife, Pernambuco</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/gustavo-ghcs" class="social-link" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="http://linkedin.com/in/gustavo-de-hollanda/" class="social-link" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Sobre</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resumo</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfólio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contato</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="sobre">
+
+        <header>
+          <h2 class="h2 article-title">Sobre mim</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Sou estudante de Sistemas de Informação, com paixão por inovação, tecnologia, hardware e empreendedorismo.
+          </p>
+
+          <p>
+            Impulsionado por um desejo incessante de aprender, 
+            busco constantemente oportunidades para desenvolver soluções inovadoras que 
+            avancem o progresso tecnológico e promovam um impacto social positivo.
+          </p>
+
+          <p>
+            Atualmente, estou focado em desenvolvimento web e mobile, com experiência em Python, JavaScript, React, React Native e Node.js. 
+            Além disso, tenho conhecimento em metodologias ágeis, design de interfaces e branding.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">O que estou fazendo</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile</h4>
+
+                <p class="service-item-text">
+                  Desenvolvimento de aplicações para Android e iOS.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web</h4>
+
+                <p class="service-item-text">
+                  Desenvolvimento de sites.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">UX / UI</h4>
+
+                <p class="service-item-text">
+                  Elaboração de interfaces de usuário intuitivas.	
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Drone</h4>
+
+                <p class="service-item-text">
+                  Produção de imagens aéreas em alta qualidade.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Depoimentos</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-weliton.png" alt="Weliton Oliveira" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Weliton Oliveira</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Trabalhar com Gustavo na área de drones foi incrível. 
+                    Com um domínio total do drone e um olhar atento, ele captura imagens aéreas de eventos com uma qualidade impressionante. 
+                    Sua criatividade e dedicação não só elevam o nível do trabalho, mas também garantem o sucesso dos eventos que cobre.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-geovanna.png" alt="Geovanna Domingos" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Geovanna Domingos</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Como desenvolvedora, eu admiro profundamente a competência técnica de Gustavo no desenvolvimento web e mobile. 
+                    Sua experiência com Python, JavaScript, React e React Native é notável, e ele se destaca em criar soluções eficazes e inovadoras. 
+                    Gustavo não apenas domina as ferramentas e tecnologias, mas também possui uma habilidade impressionante para enfrentar desafios e encontrar soluções criativas. 
+                    Seu comprometimento com o desenvolvimento e a qualidade do trabalho é inspirador e essencial para qualquer projeto
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-thiago.png" alt="Thiago Paiva" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Thiago Paiva</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Gustavo é um verdadeiro exemplo de empreendedorismo e inovação. 
+                    Sua paixão por criar soluções tecnológicas e sua visão para o futuro são inspiradoras. 
+                    Ele demonstra um grande talento para identificar oportunidades e desenvolver ideias que têm um impacto significativo. 
+                    Gustavo é um líder natural, sempre buscando maneiras de avançar e trazer progresso para suas iniciativas. 
+                    Sua dedicação ao empreendedorismo e sua capacidade de implementar soluções inovadoras fazem dele um profissional excepcional.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+            
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Weliton Oliveira" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Weliton Oliveira</h4>
+
+              <time>04 de Junho, 2023</time>
+
+              <div data-modal-text>
+                <p>
+                  Gustavo é um excelente profissional, muito dedicado e comprometido com o trabalho. Ele tem uma visão muito ampla e consegue enxergar soluções que muitas vezes passam despercebidas. Além disso, é uma pessoa muito agradável e fácil de se trabalhar.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clientes</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://portal.cin.ufpe.br/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/CIn.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.ufpe.br/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/UFPE.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.instagram.com/welitonoliveirafotografia/?hl=pt" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/Weliton.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resumo">
+
+        <header>
+          <h2 class="h2 article-title">Currículo</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Formação acadêmica</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Centro de Informática - UFPE</h4>
+
+              <span>2022 - 2026</span>
+
+              <p class="timeline-text">
+                Bacharelado em Sistemas de Informação.
+              </p>
+
+            </li>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experiência</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Iniciação Científica</h4>
+
+              <span>2024 — o momento</span>
+
+              <p class="timeline-text">
+                Responsável pelo treinamento e avaliação de modelos de
+                Machine Learning em Python, visando classificar
+                automaticamente elementos em nuvens de pontos, em
+                apoio a projetos de engenharia civil.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Monitor Chefe</h4>
+
+              <span>2022 - 2023</span>
+
+              <p class="timeline-text">
+                Responsável por auxiliar os mais de 100 alunos, em cada semestre, no processo de aprendizado em Python.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Piloto de Drones</h4>
+
+              <span>2022 - o momento</span>
+
+              <p class="timeline-text">
+                Responsável pela produção de imagens aéreas de eventos, como casamentos, pré-casamentos e debutantes.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">JavaScript</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">UX / UI Designer</h5>
+                <data value="60">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Metodologias Ágeis</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Git</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfólio">
+
+        <header>
+          <h2 class="h2 article-title">Portfólio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>Tudo</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Mobile development</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Outros</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Selecione uma categoria</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>Tudo</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Mobile development</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+              
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Outros</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="mobile development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Desimpede.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Desimpede</h3>
+
+                <p class="project-category">Mobile development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="mobile development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Clust.png" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Clust</h3>
+
+                <p class="project-category">Mobile development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/ColaboraCIn.png" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">ColaboraCIn</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/WelPics.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">WelPics</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="outros">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/MachineLearning.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Machine Learning</h3>
+
+                <p class="project-category">Outros</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contato">
+
+        <header>
+          <h2 class="h2 article-title">Contato</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501683.2470618674!2d-35.10442221443463!3d-8.046601963124245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18e897eaa550%3A0x2689be6894ffcf94!2sRecife%2C%20PE%2C%20Brazil!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd" 
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Formulário de Contato</h3>
+        
+          <form id="contact-form" action="#" class="form" data-form>
+        
+            <div class="input-wrapper">
+              <input type="text" name="user_name" class="form-input" placeholder="Nome completo" required data-form-input>
+        
+              <input type="email" name="user_email" class="form-input" placeholder="Endereço de email" required data-form-input>
+            </div>
+        
+            <textarea name="message" class="form-input" placeholder="Sua mensagem" required data-form-input></textarea>
+        
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Enviar Mensagem</span>
+            </button>
+        
+          </form>
+        
+        </section>        
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
