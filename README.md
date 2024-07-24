@@ -12,4 +12,4 @@ Se deseja falar comigo, entre em contato via [LinkedIn](https://www.linkedin.com
 
 ## License
 
-MIT
+[MIT](https://github.com/gustavo-ghcs/portfolio/blob/main/LICENSE)
