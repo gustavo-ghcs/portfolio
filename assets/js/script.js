@@ -26,6 +26,26 @@ const overlay = document.querySelector("[data-overlay]");
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
+const modalProfession = document.querySelector("[data-modal-profession]");
+
+// data for testimonials
+const testimonialsData = {
+  'Weliton Oliveira': {
+    img: './assets/images/avatar-weliton.png',
+    profession: 'Fotógrafo',
+    text: 'Trabalhar com Gustavo na área de drones foi incrível. Com um domínio total do drone e um olhar atento, ele captura imagens aéreas de eventos com uma qualidade impressionante. Sua criatividade e dedicação não só elevam o nível do trabalho, mas também garantem o sucesso dos eventos que cobre.'
+  },
+  'Geovanna Domingos': {
+    img: './assets/images/geovanna-avatar.jpg',
+    profession: 'Desenvolvedora',
+    text: 'Como desenvolvedora, eu admiro profundamente a competência técnica de Gustavo no desenvolvimento web e mobile. Sua experiência com Python, JavaScript, React e React Native é notável, e ele se destaca em criar soluções eficazes e inovadoras. Gustavo não apenas domina as ferramentas e tecnologias, mas também possui uma habilidade impressionante para enfrentar desafios e encontrar soluções criativas. Seu comprometimento com o desenvolvimento e a qualidade do trabalho é inspirador e essencial para qualquer projeto.'
+  },
+  'Thiago Paiva': {
+    img: './assets/images/thiago-avatar.jpg',
+    profession: 'Empresário',
+    text: 'Gustavo é um verdadeiro exemplo de empreendedorismo e inovação. Sua paixão por criar soluções tecnológicas e sua visão para o futuro são inspiradoras. Ele demonstra um grande talento para identificar oportunidades e desenvolver ideias que têm um impacto significativo. Gustavo é um líder natural, sempre buscando maneiras de avançar e trazer progresso para suas iniciativas. Sua dedicação ao empreendedorismo e sua capacidade de implementar soluções inovadoras fazem dele um profissional excepcional.'
+  }
+};
 
 // modal toggle function
 const testimonialsModalFunc = function () {
@@ -37,11 +57,14 @@ const testimonialsModalFunc = function () {
 for (let i = 0; i < testimonialsItem.length; i++) {
 
   testimonialsItem[i].addEventListener("click", function () {
+    const name = this.querySelector("[data-testimonials-title]").innerHTML;
+    const data = testimonialsData[name];
 
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalImg.src = data.img;
+    modalImg.alt = name;
+    modalTitle.innerHTML = name;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    modalProfession.innerHTML = data.profession;
 
     testimonialsModalFunc();
 
