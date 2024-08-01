@@ -1258,6 +1258,24 @@ textarea.form-input::-webkit-resizer { display: none; }
   .project-img,
   .blog-banner-box { height: auto; }
 
+  /**
+   * #SIDEBAR
+   */
+
+  .avatar-box img { 
+    border-radius: 15px;
+  }
+
+    /* testimonials */
+
+  .testimonials-avatar-box img { 
+    border-radius: 15px;
+  }
+
+  .modal-avatar-box img { 
+    border-radius: 15px;
+  }
+
 }
 
 
