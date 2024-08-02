@@ -4,9 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
   const preLoaderAnim = () => {
     tl.to(".texts-container", {
       duration: 0,
-      opacity: 1,
+      opacity: 0,
       ease: "Power3.easeOut",
     })
+      .to(".texts-container", {
+        duration: 0,
+        opacity: 1,
+        ease: "Power3.easeOut",
+      })
       .from(".texts-container span", {
         duration: 1.5,
         delay: 1,
