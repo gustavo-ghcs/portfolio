@@ -26,20 +26,21 @@
       })();
   </script>
   <script type="text/javascript">
-      window.onload = function() {
-          document.getElementById('contact-form').addEventListener('submit', function(event) {
-              event.preventDefault();
-              emailjs.sendForm('service_d6lxs0d', 'template_2fs6gug', this)
-                  .then((response) => {
-                      console.log('Success:', response);
-                      alert('Mensagem enviada com sucesso!');
-                      form.reset(); 
-                  }, (error) => {
-                      console.log('Error:', error);
-                      alert('Falha ao enviar a mensagem. Tente novamente.');
-                  });
-          });
-      }
+    window.onload = function() {
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_d6lxs0d', 'template_2fs6gug', this)
+                .then((response) => {
+                    console.log('Success:', response);
+                    alert('Mensagem enviada com sucesso!');
+                    form.reset(); 
+                }, (error) => {
+                    console.log('Error:', error);
+                    alert('Falha ao enviar a mensagem. Tente novamente.');
+                });
+        });
+    }
   </script>
 </head>
 
