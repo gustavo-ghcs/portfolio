@@ -1,6 +1,6 @@
 # Portfólio Pessoal
 
-Site de portfólio pessoal totalmente responsivo, construído utilisando HTML, CSS e JavaScript.
+Site de portfólio pessoal totalmente responsivo, construído utilizando HTML, CSS e JavaScript.
 
 ## Site
 
