@@ -310,6 +310,9 @@ main {
   #PRELOADER
 \*-----------------------------------*/
 
+.texts-container {
+  opacity: 0;
+}
 
 .preloader {
   position: fixed;
