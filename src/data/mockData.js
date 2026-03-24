@@ -2,28 +2,28 @@ export const testimonialsData = [
   {
     id: 1,
     name: "Geovanna Domingos",
-    avatar: "/src/assets/images/geovanna-avatar.jpg",
+    avatar: "./images/geovanna-avatar.jpg",
     text: "Como desenvolvedora, eu admiro profundamente a competência técnica de Gustavo no desenvolvimento web e mobile. Sua experiência com Python, JavaScript, React e React Native é notável, e ele se destaca em criar soluções eficazes e inovadoras. Gustavo não apenas domina as ferramentas..."
   },
   {
     id: 2,
     name: "Thiago Paiva",
-    avatar: "/src/assets/images/thiago-avatar.jpg",
+    avatar: "./images/thiago-avatar.jpg",
     text: "Gustavo é um verdadeiro exemplo de empreendedorismo e inovação. Sua paixão por criar soluções tecnológicas e sua visão para o futuro são inspiradoras. Ele demonstra um grande talento para identificar oportunidades e desenvolver ideias que têm um impacto significativo."
   },
   {
     id: 3,
     name: "Weliton Oliveira",
-    avatar: "/src/assets/images/avatar-weliton.png",
+    avatar: "./images/avatar-weliton.png",
     text: "Trabalhar com Gustavo na área de drones foi incrível. Com um domínio total do drone e um olhar atento, ele captura imagens aéreas de eventos com uma qualidade impressionante. Sua criatividade e dedicação não só elevam o nível do trabalho, mas também garantem o sucesso dos eventos que cobre."
   }
 ];
 
 export const clientsData = [
-  { id: 4, name: "BigDataCorp", logo: "/src/assets/images/bigdatacorp2.png", link: "https://bigdatacorp.com.br/", customWidth: "60px" },
-  { id: 1, name: "CIn UFPE", logo: "/src/assets/images/CIn.png", link: "https://portal.cin.ufpe.br/" },
-  { id: 2, name: "UFPE", logo: "/src/assets/images/UFPE.png", link: "https://www.ufpe.br/" },
-  { id: 3, name: "Weliton Oliveira", logo: "/src/assets/images/Weliton.png", link: "https://www.instagram.com/welitonoliveirafotografia/?hl=pt" }
+  { id: 4, name: "BigDataCorp", logo: "./images/bigdatacorp2.png", link: "https://bigdatacorp.com.br/", customWidth: "60px" },
+  { id: 1, name: "CIn UFPE", logo: "./images/CIn.png", link: "https://portal.cin.ufpe.br/" },
+  { id: 2, name: "UFPE", logo: "./images/UFPE.png", link: "https://www.ufpe.br/" },
+  { id: 3, name: "Weliton Oliveira", logo: "./images/Weliton.png", link: "https://www.instagram.com/welitonoliveirafotografia/?hl=pt" }
 ];
 
 export const projectsData = [
@@ -31,35 +31,35 @@ export const projectsData = [
     id: 1,
     title: "Desimpede",
     category: "Mobile development",
-    image: "/src/assets/images/Desimpede.png",
+    image: "./images/Desimpede.png",
     link: "https://projetao.cin.ufpe.br/generator/?dun=aboutProjetao&)"
   },
   {
     id: 2,
     title: "Clust",
     category: "Mobile development",
-    image: "/src/assets/images/Clust.png",
+    image: "./images/Clust.png",
     link: "https://github.com/joaomadruga/clust"
   },
   {
     id: 3,
     title: "ColaboraCIn",
     category: "Web development",
-    image: "/src/assets/images/ColaboraCIn.png",
+    image: "./images/ColaboraCIn.png",
     link: "https://github.com/geovannaadomingos/ProjetoEngenhariaDeSoftware"
   },
   {
     id: 4,
     title: "WelPics",
     category: "Web design",
-    image: "/src/assets/images/WelPics.png",
+    image: "./images/WelPics.png",
     link: "#"
   },
   {
     id: 5,
     title: "Machine Learning",
     category: "Outros",
-    image: "/src/assets/images/MachineLearning.png",
+    image: "./images/MachineLearning.png",
     link: "https://www.researchgate.net/scientific-contributions/Gustavo-de-Hollanda-Cavalcanti-Soares-2288642912"
   }
 ];

@@ -30,7 +30,7 @@ const About = () => {
         <ul className="service-list">
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="/src/assets/images/icon-app.svg" alt="mobile app icon" width="40" />
+              <img src="./images/icon-app.svg" alt="mobile app icon" width="40" />
             </div>
             <div className="service-content-box">
               <h4 className="h4 service-item-title">Mobile</h4>
@@ -39,7 +39,7 @@ const About = () => {
           </li>
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="/src/assets/images/icon-dev.svg" alt="Web development icon" width="40" />
+              <img src="./images/icon-dev.svg" alt="Web development icon" width="40" />
             </div>
             <div className="service-content-box">
               <h4 className="h4 service-item-title">Web</h4>
@@ -48,7 +48,7 @@ const About = () => {
           </li>
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="/src/assets/images/icon-dev.svg" alt="backend icon" width="40" />
+              <img src="./images/icon-dev.svg" alt="backend icon" width="40" />
             </div>
             <div className="service-content-box">
               <h4 className="h4 service-item-title">Back End</h4>
@@ -57,7 +57,7 @@ const About = () => {
           </li>
           <li className="service-item">
             <div className="service-icon-box">
-              <img src="/src/assets/images/icon-photo.svg" alt="camera icon" width="40" />
+              <img src="./images/icon-photo.svg" alt="camera icon" width="40" />
             </div>
             <div className="service-content-box">
               <h4 className="h4 service-item-title">Drone</h4>
@@ -92,7 +92,7 @@ const About = () => {
               <figure className="modal-avatar-box">
                 <img src={modalData.avatar} alt={modalData.name} width="80" data-modal-img />
               </figure>
-              <img src="/src/assets/images/icon-quote.svg" alt="quote icon" />
+              <img src="./images/icon-quote.svg" alt="quote icon" />
             </div>
             <div className="modal-content">
               <h4 className="h3 modal-title" data-modal-title>{modalData.name}</h4>

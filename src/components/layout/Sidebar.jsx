@@ -7,7 +7,7 @@ const Sidebar = () => {
     <aside className={`sidebar ${isOpen ? "active" : ""}`} data-sidebar>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src="/src/assets/images/perfil.jpg" alt="Gustavo Hollanda" width="80" />
+          <img src="./images/perfil.jpg" alt="Gustavo Hollanda" width="80" />
         </figure>
 
         <div className="info-content">
