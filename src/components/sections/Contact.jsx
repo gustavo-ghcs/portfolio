@@ -3,7 +3,7 @@ import { useContactForm } from "../../hooks/useContactForm";
 
 const Contact = () => {
   const formRef = useRef();
-  const { isSubmitting, sendEmail } = useContactForm();
+  const { isSubmitting, status, sendEmail } = useContactForm();
 
   const handleSubmit = (e) => {
     sendEmail(e, formRef);
@@ -29,15 +29,20 @@ const Contact = () => {
         
         <form ref={formRef} onSubmit={handleSubmit} className="form" data-form>
           <div className="input-wrapper">
-            <input type="text" name="user_name" className="form-input" placeholder="Nome completo" required data-form-input />
-            <input type="email" name="user_email" className="form-input" placeholder="Endereço de email" required data-form-input />
+            <input type="text" name="name" className="form-input" placeholder="Nome completo" required data-form-input />
+            <input type="email" name="email" className="form-input" placeholder="Endereço de email" required data-form-input />
           </div>
           
           <textarea name="message" className="form-input" placeholder="Sua mensagem" required data-form-input></textarea>
           
-          <button className="form-btn" type="submit" disabled={isSubmitting} data-form-btn>
-            <ion-icon name="paper-plane"></ion-icon>
-            <span>{isSubmitting ? "Enviando..." : "Enviar Mensagem"}</span>
+          <button className="form-btn" type="submit" disabled={isSubmitting || status === "success"} data-form-btn>
+            <ion-icon name={status === "success" ? "checkmark" : (status === "error" ? "close" : "paper-plane")}></ion-icon>
+            <span>
+              {isSubmitting ? "Enviando..." : 
+               status === "success" ? "Enviado!" : 
+               status === "error" ? "Erro ao tentar enviar" : 
+               "Enviar Mensagem"}
+            </span>
           </button>
         </form>
       </section>
