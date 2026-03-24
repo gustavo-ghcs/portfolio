@@ -180,3 +180,14 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function moveSlide(direction, type) {
+  const track = document.querySelector(`.carousel-track.${type}`);
+  const items = document.querySelectorAll(`.carousel-track.${type} .carousel-item`);
+  const itemWidth = items[0].offsetWidth + 20; // Largura + margem
+
+  track.scrollBy({
+      left: direction * itemWidth,
+      behavior: "smooth"
+  });
+}
