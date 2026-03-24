@@ -3,7 +3,7 @@ import React from "react";
 const ProjectCard = ({ data }) => {
   return (
     <li className="project-item active" data-filter-item data-category={data.category.toLowerCase()}>
-      <a href={data.link}>
+      <a href={data.link} target="_blank" rel="noopener noreferrer">
         <figure className="project-img">
           <div className="project-item-icon-box">
             <ion-icon name="eye-outline"></ion-icon>

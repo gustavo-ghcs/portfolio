@@ -32,21 +32,21 @@ export const projectsData = [
     title: "Desimpede",
     category: "Mobile development",
     image: "/src/assets/images/Desimpede.png",
-    link: "#"
+    link: "https://projetao.cin.ufpe.br/generator/?dun=aboutProjetao&)"
   },
   {
     id: 2,
     title: "Clust",
     category: "Mobile development",
     image: "/src/assets/images/Clust.png",
-    link: "#"
+    link: "https://github.com/joaomadruga/clust"
   },
   {
     id: 3,
     title: "ColaboraCIn",
     category: "Web development",
     image: "/src/assets/images/ColaboraCIn.png",
-    link: "#"
+    link: "https://github.com/geovannaadomingos/ProjetoEngenhariaDeSoftware"
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ export const projectsData = [
     title: "Machine Learning",
     category: "Outros",
     image: "/src/assets/images/MachineLearning.png",
-    link: "#"
+    link: "https://www.researchgate.net/scientific-contributions/Gustavo-de-Hollanda-Cavalcanti-Soares-2288642912"
   }
 ];
 
