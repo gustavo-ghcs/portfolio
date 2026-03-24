@@ -68,6 +68,8 @@ export const skillsData = [
   "C#", ".Net", "AWS", "Python", "Numpy", "Pandas", "Scikit-learn", "JavaScript", "React", "Swift", "AWS EC2", "AWS ECS Fargate", "AWS S3", "AWS SQS", "Opensearch", "MongoDB", "GitHub", "GitLab", "Docker"
 ];
 
+export const carouselSpeed = "35s";
+
 export const experienceData = [
   {
     id: 1,

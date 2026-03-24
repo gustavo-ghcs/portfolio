@@ -1,5 +1,5 @@
 import React from "react";
-import { experienceData, skillsData } from "../../data/mockData";
+import { experienceData, skillsData, carouselSpeed } from "../../data/mockData";
 import "../../assets/css/Resume.css";
 
 const Resume = () => {
@@ -47,7 +47,7 @@ const Resume = () => {
 
       <section className="skill">
         <h3 className="h3 skills-title">Skills</h3>
-        <div className="skills-marquee-wrapper">
+        <div className="skills-marquee-wrapper" style={{ "--marquee-duration": carouselSpeed }}>
           <div className="skills-marquee">
             {[...skillsData, ...skillsData].map((skill, index) => (
               <div className="skill-badge" key={index}>
