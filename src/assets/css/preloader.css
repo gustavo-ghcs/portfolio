@@ -34,3 +34,22 @@
 .preloader .texts-container span {
   display: block;
 }
+
+/* Global Avatar Fix for mobile squares */
+.avatar-box, 
+.testimonials-avatar-box, 
+.modal-avatar-box {
+  overflow: hidden !important;
+}
+
+.avatar-box img, 
+.testimonials-avatar-box img, 
+.modal-avatar-box img {
+  border-radius: inherit !important;
+  object-fit: cover !important;
+}
+
+/* Fix mobile click highlight */
+* {
+  -webkit-tap-highlight-color: transparent !important;
+}
