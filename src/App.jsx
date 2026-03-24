@@ -4,6 +4,7 @@ import About from "./components/sections/About";
 import Resume from "./components/sections/Resume";
 import Portfolio from "./components/sections/Portfolio";
 import Contact from "./components/sections/Contact";
+import Preloader from "./components/Preloader";
 import "./assets/css/style.css";
 
 function App() {
@@ -25,9 +26,12 @@ function App() {
   };
 
   return (
-    <MainLayout activeTab={activeTab} setActiveTab={setActiveTab}>
-      {renderSection()}
-    </MainLayout>
+    <>
+      <Preloader />
+      <MainLayout activeTab={activeTab} setActiveTab={setActiveTab}>
+        {renderSection()}
+      </MainLayout>
+    </>
   );
 }
 
